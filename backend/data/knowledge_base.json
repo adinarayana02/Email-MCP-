@@ -1,0 +1,245 @@
+{
+    "general": {
+      "greeting": "Thank you for contacting our support team. We appreciate your patience and are committed to providing you with excellent service.",
+      "closing": "If you have any further questions or concerns, please don't hesitate to reach out to us. We're here to help!",
+      "acknowledgment": "We have received your message and understand your concern.",
+      "follow_up": "We will follow up with you within 24 hours with a detailed response."
+    },
+    "technical_issues": {
+      "login_problems": {
+        "description": "For login-related issues, we recommend the following troubleshooting steps:",
+        "solutions": [
+          "Try resetting your password using the 'Forgot Password' link",
+          "Clear your browser cache and cookies",
+          "Ensure you're using the correct email address",
+          "Try logging in from an incognito/private browser window",
+          "Disable browser extensions that might interfere"
+        ],
+        "escalation": "If these steps don't resolve the issue, our technical team will investigate further."
+      },
+      "connectivity": {
+        "description": "For connectivity and network-related issues:",
+        "solutions": [
+          "Check your internet connection stability",
+          "Try refreshing the page or restarting the application",
+          "Verify that our service status page shows no outages",
+          "Try accessing from a different network or device",
+          "Ensure your firewall isn't blocking our services"
+        ],
+        "escalation": "Our technical team monitors connectivity issues closely and will resolve any service disruptions promptly."
+      },
+      "performance": {
+        "description": "We're aware of some performance issues and our engineering team is actively working on improvements.",
+        "solutions": [
+          "Try clearing your browser cache",
+          "Close unnecessary browser tabs",
+          "Check if the issue persists across different browsers",
+          "Ensure your browser is updated to the latest version"
+        ],
+        "escalation": "Performance optimizations are continuously being deployed to improve your experience."
+      },
+      "bugs": {
+        "description": "Thank you for reporting this bug. Your feedback helps us improve our service.",
+        "process": [
+          "Our QA team will reproduce the issue",
+          "The bug will be prioritized based on its impact",
+          "You'll receive updates as we work on the fix",
+          "We'll notify you once the issue is resolved"
+        ]
+      }
+    },
+    "billing": {
+      "payment_failed": {
+        "description": "For failed payment issues, please follow these steps:",
+        "solutions": [
+          "Verify your payment method details (card number, expiration, CVV)",
+          "Ensure sufficient funds are available",
+          "Check if your card issuer has blocked the transaction",
+          "Try using an alternative payment method",
+          "Contact your bank to authorize international transactions if applicable"
+        ],
+        "contact": "Our billing team can also assist you directly with payment processing."
+      },
+      "refund_request": {
+        "description": "We understand your refund request and want to ensure your satisfaction.",
+        "process": [
+          "Refund requests are reviewed within 2 business days",
+          "Processing typically takes 5-7 business days",
+          "You'll receive email confirmation once processed",
+          "Refunds appear on your original payment method"
+        ],
+        "policy": "Please refer to our refund policy for detailed terms and conditions."
+      },
+      "billing_inquiry": {
+        "description": "For billing inquiries and questions about charges:",
+        "information_needed": [
+          "Your account email address",
+          "The billing period in question",
+          "Specific charges you'd like clarification on",
+          "Your preferred contact method for follow-up"
+        ],
+        "response_time": "Our billing specialists will review your account and respond within 24 hours."
+      },
+      "subscription": {
+        "description": "For subscription-related questions and changes:",
+        "services": [
+          "Plan upgrades and downgrades",
+          "Billing cycle modifications",
+          "Subscription cancellations",
+          "Feature access questions",
+          "Usage limit inquiries"
+        ]
+      }
+    },
+    "product_info": {
+      "features": {
+        "description": "Our platform offers comprehensive features designed to meet your business needs:",
+        "core_features": [
+          "Advanced analytics and reporting",
+          "Real-time data processing",
+          "Seamless integrations with popular tools",
+          "Customizable dashboards",
+          "24/7 customer support"
+        ],
+        "enterprise_features": [
+          "Single Sign-On (SSO)",
+          "Advanced security controls",
+          "Priority support",
+          "Custom integrations",
+          "Dedicated account management"
+        ]
+      },
+      "pricing": {
+        "description": "We offer flexible pricing plans to accommodate different needs:",
+        "basic_plan": "Perfect for small teams getting started",
+        "professional_plan": "Ideal for growing businesses",
+        "enterprise_plan": "Comprehensive solution for large organizations",
+        "contact": "For detailed pricing information and custom quotes, please visit our pricing page or contact our sales team."
+      },
+      "integrations": {
+        "description": "Our platform integrates seamlessly with popular business tools:",
+        "categories": [
+          "CRM systems (Salesforce, HubSpot, Pipedrive)",
+          "Communication tools (Slack, Microsoft Teams)",
+          "Project management (Jira, Trello, Asana)",
+          "Analytics platforms (Google Analytics, Mixpanel)",
+          "Development tools (GitHub, GitLab)"
+        ]
+      }
+    },
+    "account_management": {
+      "password_reset": {
+        "description": "To reset your password:",
+        "steps": [
+          "Visit the login page and click 'Forgot Password'",
+          "Enter your registered email address",
+          "Check your email for reset instructions",
+          "Follow the link and create a new password",
+          "Ensure your new password meets security requirements"
+        ]
+      },
+      "profile_updates": {
+        "description": "You can update your profile information from your account settings:",
+        "updatable_fields": [
+          "Personal information (name, email)",
+          "Company details",
+          "Notification preferences",
+          "Privacy settings",
+          "Security settings"
+        ]
+      },
+      "data_export": {
+        "description": "We support data export for account portability:",
+        "formats": ["CSV", "JSON", "XML"],
+        "process": [
+          "Submit a data export request through your account settings",
+          "We'll prepare your data export within 48 hours",
+          "You'll receive a secure download link via email",
+          "The download link expires after 7 days for security"
+        ]
+      }
+    },
+    "complaint_handling": {
+      "acknowledgment": "We sincerely apologize for any inconvenience you've experienced. Your feedback is valuable to us and helps improve our service.",
+      "investigation": "We take all complaints seriously and will conduct a thorough investigation into the matter.",
+      "escalation": "A senior team member will personally review your case and contact you within 24 hours.",
+      "follow_up": "We'll keep you updated throughout the resolution process and ensure your concerns are fully addressed.",
+      "compensation": "Where appropriate, we'll discuss compensation or service credits to make up for any inconvenience caused."
+    },
+    "feature_requests": {
+      "acknowledgment": "Thank you for your feature suggestion! Customer feedback drives our product development.",
+      "process": [
+        "Your request will be reviewed by our product team",
+        "We'll evaluate feasibility and impact",
+        "Popular requests are prioritized in our roadmap",
+        "You'll be notified when features are implemented"
+      ],
+      "alternatives": "In the meantime, let us know if there are existing features or workarounds that might meet your needs."
+    },
+    "emergency_responses": {
+      "system_outage": {
+        "immediate": "We're aware of the current system outage and our engineering team is working to resolve it immediately.",
+        "updates": "Please check our status page for real-time updates on the situation.",
+        "eta": "We expect to have services restored within the next 2 hours.",
+        "follow_up": "We'll send a detailed post-incident report once the issue is fully resolved."
+      },
+      "security_incident": {
+        "immediate": "Thank you for reporting this security concern. We take security very seriously.",
+        "action": "Our security team has been notified and is investigating immediately.",
+        "protection": "We've implemented additional monitoring and protective measures.",
+        "communication": "We'll provide updates as we learn more about the situation."
+      },
+      "data_loss": {
+        "immediate": "We understand how concerning data loss can be. Let us investigate this immediately.",
+        "recovery": "Our team will attempt data recovery from our backup systems.",
+        "timeline": "We'll provide an update on recovery progress within 4 hours.",
+        "prevention": "We're also reviewing our backup procedures to prevent similar issues."
+      }
+    },
+    "satisfaction_responses": {
+      "positive_feedback": {
+        "gratitude": "Thank you so much for your kind words! We're thrilled to hear about your positive experience.",
+        "team_recognition": "I'll make sure to share your feedback with the team - it truly makes their day.",
+        "commitment": "We're committed to maintaining this level of service and appreciate your loyalty."
+      },
+      "neutral_feedback": {
+        "acknowledgment": "Thank you for taking the time to share your feedback.",
+        "improvement": "We're always looking for ways to improve and would love to hear any specific suggestions.",
+        "follow_up": "Is there anything specific we could do to enhance your experience?"
+      }
+    },
+    "context_responses": {
+      "first_time_user": {
+        "welcome": "Welcome to our platform! We're excited to have you on board.",
+        "resources": "Here are some helpful resources to get you started:",
+        "support": "Our support team is here to help you every step of the way."
+      },
+      "returning_customer": {
+        "appreciation": "Thank you for your continued trust in our service.",
+        "personalized": "Based on your account history, here's what we can help you with:",
+        "loyalty": "As a valued long-term customer, please let us know if there's anything special we can do for you."
+      },
+      "enterprise_customer": {
+        "priority": "As an enterprise customer, your request has been marked as high priority.",
+        "dedicated_support": "Your dedicated account manager has been notified and will follow up separately.",
+        "escalation": "I'm also escalating this to our enterprise support team for immediate attention."
+      }
+    },
+    "tone_modifiers": {
+      "urgent_situation": {
+        "empathy": "I understand how urgent this situation is for you.",
+        "priority": "I've marked this as high priority and our team is addressing it immediately.",
+        "communication": "I'll personally ensure you receive updates every 2 hours until this is resolved."
+      },
+      "frustrated_customer": {
+        "validation": "I completely understand your frustration, and I sincerely apologize for the inconvenience.",
+        "ownership": "Let me personally take ownership of resolving this issue for you.",
+        "commitment": "I won't consider this matter closed until you're completely satisfied with the resolution."
+      },
+      "technical_user": {
+        "detail": "I'll provide you with detailed technical information and logs if needed.",
+        "collaboration": "Feel free to share any additional technical details that might help us troubleshoot.",
+        "documentation": "I'll also ensure our technical documentation is updated based on this interaction."
+      }
+    }
+  }

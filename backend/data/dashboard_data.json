@@ -1,0 +1,1 @@
+{"summary": {"total_emails": 20, "pending_emails": 20, "resolved_emails": 0, "urgent_emails": 4, "avg_response_time": 74, "ai_accuracy": 87}, "charts": {"priority": [{"name": "urgent", "value": 4}, {"name": "normal", "value": 16}], "sentiment": [{"name": "negative", "value": 10}, {"name": "neutral", "value": 10}]}}

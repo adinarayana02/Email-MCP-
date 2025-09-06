@@ -1,0 +1,50 @@
+# FastAPI and web framework
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# Database and ORM
+sqlalchemy>=2.0.23
+alembic>=1.12.1
+pymysql
+
+# Data validation and settings
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+python-dotenv>=1.0.0
+email-validator>=2.0.0
+
+# AI and Machine Learning
+openai>=1.3.7
+transformers>=4.36.2
+torch>=2.2.0
+scikit-learn>=1.3.2
+textblob>=0.17.1
+
+# Data processing
+pandas>=2.1.4
+numpy>=1.25.2
+python-dateutil>=2.8.2
+
+# HTTP and web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+
+# Background tasks and scheduling
+schedule>=1.2.0
+
+# CORS and middleware
+fastapi-cors>=0.0.6
+
+# Security and authentication
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# Email processing (built-in Python modules)
+# imaplib, email, smtplib are part of Python standard library
+
+# Logging (built-in Python module)
+# logging is part of Python standard library
+
+# Threading and queues (built-in Python modules)
+# threading, queue are part of Python standard library
