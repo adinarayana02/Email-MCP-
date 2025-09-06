@@ -1,256 +1,327 @@
-# AI Communication Assistant - Frontend
+# AI-Powered Communication Assistant
 
-A modern, responsive React-based frontend for the AI-Powered Communication Assistant that provides intelligent email management, analytics, and automated response generation.
+A comprehensive email management system that uses artificial intelligence to automatically analyze, categorize, prioritize, and generate responses to customer support emails.
 
 ## 🚀 Features
 
-- **📧 Email Management Dashboard** - Comprehensive email listing with filtering and sorting
-- **🤖 AI-Powered Analysis** - Sentiment analysis, priority detection, and categorization
-- **📊 Advanced Analytics** - Interactive charts and real-time statistics
-- **✍️ Response Editor** - AI-generated draft responses with editing capabilities
-- **🎨 Modern UI/UX** - Clean, responsive design with Tailwind CSS
-- **📱 Mobile-First** - Optimized for all device sizes
-- **🌙 Dark Mode Support** - Automatic theme switching
-- **♿ Accessibility** - WCAG compliant with ARIA support
+### Core Functionality
 
-## 🛠️ Tech Stack
+- **Email Retrieval & Filtering**: Automatically fetch and filter support-related emails
+- **AI-Powered Analysis**: Sentiment analysis, priority detection, and email categorization
+- **Smart Prioritization**: Urgent emails are automatically flagged and prioritized
+- **Context-Aware Responses**: AI-generated responses using RAG (Retrieval-Augmented Generation)
+- **Comprehensive Dashboard**: Real-time analytics and email management interface
 
-- **Framework**: React 18 with Hooks
-- **Styling**: Tailwind CSS with custom design system
-- **Charts**: Recharts for data visualization
-- **State Management**: React Query + Zustand
-- **Forms**: React Hook Form with Zod validation
-- **Icons**: Lucide React + React Icons
-- **HTTP Client**: Axios with interceptors
-- **Testing**: Jest + React Testing Library + Cypress
-- **Build Tool**: Create React App with custom config
+### Advanced Capabilities
 
-## 📋 Prerequisites
+- **Multi-Priority Levels**: Urgent, High, Normal, and Low priority classification
+- **Enhanced Categorization**: Technical support, billing, complaints, feature requests, etc.
+- **Information Extraction**: Automatic extraction of contact details, customer requirements, and metadata
+- **Response Templates**: Pre-built templates for common scenarios
+- **Bulk Operations**: Mass email management and updates
+- **Performance Analytics**: Detailed metrics and insights
 
-- Node.js >= 16.0.0
-- npm >= 8.0.0 or yarn >= 1.22.0
-- Backend API running on `http://localhost:8000`
+## 🏗️ Architecture
 
-## 🚀 Quick Start
+### Backend (Python/FastAPI)
 
-### 1. Install Dependencies
+- **FastAPI**: Modern, fast web framework for building APIs
+- **SQLAlchemy**: SQL toolkit and Object-Relational Mapping
+- **SQLite**: Lightweight database for development and production
+- **OpenAI GPT**: AI-powered response generation
+- **Transformers**: Advanced sentiment analysis and NLP
+- **Background Tasks**: Automated email processing and analytics
+
+### Frontend (React)
+
+- **React 18**: Modern React with hooks and functional components
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **Recharts**: Beautiful and composable charts for analytics
+- **Lucide React**: Beautiful & consistent icon toolkit
+- **React Toastify**: Toast notifications for user feedback
+
+### AI Services
+
+- **Sentiment Analysis**: Multi-label sentiment classification
+- **Priority Detection**: Keyword-based urgency assessment
+- **Email Categorization**: Intelligent topic classification
+- **Response Generation**: Context-aware AI responses with RAG
+- **Information Extraction**: Named entity recognition and data extraction
+
+## 📋 Requirements
+
+### Backend Dependencies
+
+- Python 3.8+
+- FastAPI 0.104.1+
+- SQLAlchemy 2.0.23+
+- OpenAI API key
+- Transformers 4.36.2+
+- PyTorch 2.1.1+
+
+### Frontend Dependencies
+
+- Node.js 16+
+- React 18.2.0+
+- Tailwind CSS 3.3.6+
+- Recharts 2.8.0+
+
+## 🛠️ Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd Hackthon
+```
+
+### 2. Backend Setup
+
+```bash
+cd backend
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set environment variables
+cp .env.example .env
+# Edit .env with your OpenAI API key and other configurations
+
+# Initialize database
+python -m app.main
+```
+
+### 3. Frontend Setup
 
 ```bash
 cd frontend
+
+# Install dependencies
 npm install
-```
 
-### 2. Environment Setup
-
-Create a `.env` file in the frontend directory:
-
-```env
-REACT_APP_API_URL=http://localhost:8000
-REACT_APP_APP_NAME=AI Communication Assistant
-REACT_APP_VERSION=1.0.0
-```
-
-### 3. Start Development Server
-
-```bash
+# Start development server
 npm start
 ```
 
-The application will open at `http://localhost:3000`
+### 4. Environment Configuration
 
-## 📁 Project Structure
+Create a `.env` file in the backend directory:
 
-```
-frontend/
-├── public/                 # Static assets
-├── src/
-│   ├── components/         # Reusable UI components
-│   │   ├── Charts/        # Data visualization components
-│   │   ├── common/        # Shared components (Header, Sidebar)
-│   │   └── Dashboard/     # Dashboard-specific components
-│   ├── hooks/             # Custom React hooks
-│   ├── services/          # API and external service integrations
-│   ├── utils/             # Utility functions and helpers
-│   ├── App.js             # Main application component
-│   └── index.js           # Application entry point
-├── tailwind.config.js     # Tailwind CSS configuration
-├── postcss.config.js      # PostCSS configuration
-└── package.json           # Dependencies and scripts
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+DATABASE_URL=sqlite:///./data/email_database.db
+PROJECT_NAME=AI Communication Assistant
+ENVIRONMENT=development
 ```
 
-## 🎨 Design System
+## 🚀 Usage
 
-### Color Palette
+### Starting the Application
 
-- **Primary**: Blue (#3B82F6) - Main actions and branding
-- **Success**: Green (#22C55E) - Positive states and confirmations
-- **Warning**: Yellow (#F59E0B) - Caution and pending states
-- **Danger**: Red (#EF4444) - Errors and destructive actions
-- **Info**: Cyan (#06B6D4) - Information and neutral states
-
-### Typography
-
-- **Font Family**: Inter (system fallback)
-- **Scale**: 12px to 72px with consistent line heights
-- **Weights**: 400 (regular), 500 (medium), 600 (semibold), 700 (bold)
-
-### Components
-
-- **Cards**: Consistent elevation and border radius
-- **Buttons**: Multiple variants (primary, secondary, outline, ghost)
-- **Forms**: Accessible inputs with validation states
-- **Tables**: Responsive data tables with sorting
-
-## 🔧 Available Scripts
+1. **Start Backend Server**
 
 ```bash
-# Development
-npm start              # Start development server
-npm run build         # Build for production
-npm run test          # Run tests in watch mode
-npm run test:coverage # Run tests with coverage
-
-# Code Quality
-npm run lint          # Check for linting errors
-npm run lint:fix      # Fix auto-fixable linting errors
-npm run format        # Format code with Prettier
-npm run type-check    # Type checking (if using TypeScript)
-
-# Testing
-npm run cypress:open  # Open Cypress test runner
-npm run cypress:run   # Run Cypress tests headlessly
-
-# Build Analysis
-npm run build:analyze # Analyze bundle size
+cd backend
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
+
+2. **Start Frontend Development Server**
+
+```bash
+cd frontend
+npm start
+```
+
+3. **Access the Application**
+
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8000
+- API Documentation: http://localhost:8000/docs
+
+### Key Features Usage
+
+#### Email Management
+
+- **Priority Queue**: View emails sorted by urgency and importance
+- **Filtering**: Filter by priority, sentiment, category, and status
+- **Search**: Full-text search across email content
+- **Bulk Actions**: Mass update, assign, or resolve emails
+
+#### Response Management
+
+- **AI Generation**: Automatically generate contextual responses
+- **Template System**: Use pre-built response templates
+- **Manual Editing**: Edit and customize AI-generated responses
+- **Response Tracking**: Monitor response status and metrics
+
+#### Analytics Dashboard
+
+- **Real-time Metrics**: Live email statistics and performance indicators
+- **Trend Analysis**: Historical data and pattern recognition
+- **Performance Insights**: AI accuracy and response quality metrics
+- **Export Options**: Download reports in PDF or CSV format
+
+## 🔧 Configuration
+
+### AI Service Configuration
+
+The AI service can be configured through environment variables and the knowledge base:
+
+```python
+# Backend configuration
+OPENAI_API_KEY=your_api_key
+AI_MODEL=gpt-3.5-turbo
+SENTIMENT_MODEL=cardiffnlp/twitter-roberta-base-sentiment-latest
+```
+
+### Knowledge Base
+
+Customize the knowledge base in `backend/data/knowledge_base.json`:
+
+```json
+{
+  "technical_issues": {
+    "login_problems": "Custom response for login issues...",
+    "connectivity": "Custom response for connectivity problems..."
+  },
+  "billing": {
+    "payment_failed": "Custom response for payment issues..."
+  }
+}
+```
+
+### Email Filtering
+
+Configure email filtering criteria in the backend:
+
+```python
+SUPPORT_KEYWORDS = [
+    "support", "query", "request", "help", "issue", "problem"
+]
+
+URGENT_KEYWORDS = [
+    "urgent", "critical", "emergency", "immediately", "asap"
+]
+```
+
+## 📊 API Endpoints
+
+### Email Management
+
+- `GET /api/v1/emails/` - Get all emails with filtering
+- `GET /api/v1/emails/priority-queue` - Get priority-sorted emails
+- `POST /api/v1/emails/filter` - Advanced email filtering
+- `PUT /api/v1/emails/{id}` - Update email metadata
+- `POST /api/v1/emails/bulk-update` - Bulk email operations
+
+### Analytics
+
+- `GET /api/v1/analytics/dashboard` - Dashboard statistics
+- `GET /api/v1/analytics/sentiment-analysis` - Sentiment trends
+- `GET /api/v1/analytics/priority-analysis` - Priority distribution
+- `GET /api/v1/analytics/performance-metrics` - AI performance data
+
+### Response Management
+
+- `POST /api/v1/emails/{id}/send-response` - Send email response
+- `PUT /api/v1/emails/{id}/response` - Update generated response
 
 ## 🧪 Testing
 
-### Unit Tests
+### Backend Testing
 
 ```bash
+cd backend
+pytest tests/
+```
+
+### Frontend Testing
+
+```bash
+cd frontend
 npm test
 ```
 
-Tests are written using Jest and React Testing Library, focusing on component behavior and user interactions.
+### API Testing
 
-### E2E Tests
-
-```bash
-npm run cypress:open
-```
-
-End-to-end tests using Cypress for critical user flows and integration testing.
-
-### Test Coverage
-
-```bash
-npm run test:coverage
-```
-
-Generates coverage reports to ensure comprehensive testing.
-
-## 📱 Responsive Design
-
-The application is built with a mobile-first approach:
-
-- **Mobile**: < 640px - Single column layout
-- **Tablet**: 640px - 1024px - Two column layout
-- **Desktop**: > 1024px - Full multi-column layout
-
-## ♿ Accessibility
-
-- **WCAG 2.1 AA** compliance
-- **Keyboard navigation** support
-- **Screen reader** optimization
-- **High contrast** mode support
-- **Focus management** for modals and forms
-
-## 🌙 Dark Mode
-
-Automatic dark mode detection with manual toggle:
-
-```jsx
-import { useTheme } from './hooks/useTheme';
-
-const { theme, toggleTheme } = useTheme();
-```
-
-## 📊 Performance
-
-- **Code splitting** with React.lazy()
-- **Virtual scrolling** for large lists
-- **Image optimization** with lazy loading
-- **Bundle analysis** and optimization
-- **Service worker** for offline support
-
-## 🔒 Security
-
-- **XSS protection** with proper sanitization
-- **CSRF protection** with token validation
-- **Content Security Policy** headers
-- **Input validation** on client and server
-- **Secure HTTP** only in production
+Use the interactive API documentation at http://localhost:8000/docs
 
 ## 🚀 Deployment
 
-### Production Build
-
-```bash
-npm run build
-```
-
-### Environment Variables
-
-Set production environment variables:
-
-```env
-REACT_APP_API_URL=https://api.yourdomain.com
-REACT_APP_ENVIRONMENT=production
-```
-
 ### Docker Deployment
 
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["npm", "start"]
+```bash
+# Build and run with Docker Compose
+docker-compose up --build
 ```
+
+### Production Deployment
+
+1. **Backend**: Deploy to cloud platform (AWS, GCP, Azure)
+2. **Frontend**: Build and deploy to CDN or hosting service
+3. **Database**: Use production database (PostgreSQL, MySQL)
+4. **Environment**: Set production environment variables
+
+## 🔒 Security Considerations
+
+- **API Key Management**: Secure storage of OpenAI API keys
+- **Input Validation**: Comprehensive input sanitization
+- **Rate Limiting**: API rate limiting to prevent abuse
+- **CORS Configuration**: Proper CORS settings for production
+- **Database Security**: Secure database connections and queries
+
+## 📈 Performance Optimization
+
+- **Background Processing**: Asynchronous email processing
+- **Database Indexing**: Optimized database queries
+- **Caching**: Response caching for improved performance
+- **Connection Pooling**: Efficient database connection management
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Code Style
-
-- Use Prettier for formatting
-- Follow ESLint rules
-- Write meaningful commit messages
-- Add tests for new features
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Submit a pull request
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🆘 Support
 
-- **Documentation**: [Wiki](../../wiki)
-- **Issues**: [GitHub Issues](../../issues)
-- **Discussions**: [GitHub Discussions](../../discussions)
-- **Email**: support@yourdomain.com
+For support and questions:
 
-## 🙏 Acknowledgments
+- Create an issue in the repository
+- Check the API documentation
+- Review the code examples
 
-- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
-- [Recharts](https://recharts.org/) for beautiful charts
-- [Lucide](https://lucide.dev/) for the icon library
-- [React Query](https://tanstack.com/query) for server state management
+## 🔮 Future Enhancements
+
+- **Multi-language Support**: Internationalization and localization
+- **Advanced AI Models**: Integration with newer AI models
+- **Mobile Application**: React Native mobile app
+- **Integration APIs**: Connect with popular email services
+- **Machine Learning**: Continuous learning from user feedback
+- **Advanced Analytics**: Predictive analytics and insights
+
+## 📊 Project Status
+
+- ✅ Core email management functionality
+- ✅ AI-powered analysis and categorization
+- ✅ Response generation and management
+- ✅ Comprehensive analytics dashboard
+- ✅ Modern, responsive UI
+- 🔄 Advanced filtering and search
+- 🔄 Bulk operations and automation
+- 🔄 Performance optimization
+- 🔄 Testing and documentation
+
+---
+
+**Built with ❤️ for efficient customer support management**
